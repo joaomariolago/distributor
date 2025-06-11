@@ -66,6 +66,13 @@ jobs:
           cp -f ../scripts/u-boot-hi3516ev200.sh build.sh
           bash build.sh
 
+      - name: u-boot-hi3519
+        run: |
+          git clone https://github.com/OpenIPC/u-boot-hi3519.git --depth 1
+          cd u-boot-hi3519
+          cp -f ../scripts/u-boot-hi3519.sh build.sh
+          bash build.sh
+
       - name: u-boot-ingenic
         run: |
           git clone https://github.com/openipc/u-boot-ingenic.git --depth 1
@@ -98,6 +105,7 @@ jobs:
             u-boot-hi3516ev200/output/u-boot-hi3516ev200-universal.bin
             u-boot-hi3516ev200/output/u-boot-hi3516ev300-universal.bin
             u-boot-hi3516ev200/output/u-boot-hi3518ev300-universal.bin
+            u-boot-hi3519/output/u-boot-hi3519-universal.bin
             u-boot-ingenic/output/u-boot-t10-nor.bin
             u-boot-ingenic/output/u-boot-t10l-nor.bin
             u-boot-ingenic/output/u-boot-t20-nor.bin
